@@ -4,7 +4,7 @@ import { Input } from "baseui/input";
 import { FormControl } from "baseui/form-control";
 import { Button } from "baseui/button";
 import { Block } from "baseui/block";
-import { Label2 } from "baseui/typography";
+import { Label2, Label1, Paragraph2 } from "baseui/typography";
 
 import Allocate from "./calculate";
 
@@ -32,8 +32,20 @@ export default () => {
   };
 
   return (
-    <Centered>
-      <Block display="flex" flexDirection="column" width="100%" height="100%">
+    <Centered style={{ marginTop: "50px" }}>
+      <Label1>All Weather Portfolio Rebalancer</Label1>
+      <Block
+        display="flex"
+        flexDirection="column"
+        width={["80%", "50%"]}
+        height="100%"
+      >
+        <Paragraph2>
+          You will need to input 4 things: the amount of cash you wish to
+          invest, and the prices of the assets. Please, round it to a whole
+          number. For example, if S&P500 costis 39.21 GBP, then input 40.
+        </Paragraph2>
+
         <FormControl label="Cash you are investing">
           <Input
             value={cash}
@@ -70,16 +82,31 @@ export default () => {
         </FormControl>
       </Block>
       {result && (
-        <Block width="80%">
+        <Block width={["70%", "40%"]}>
           <Label2>Your allocation is</Label2>
-          <FormControl label="SP500 number of shares">
-            <Input value={result["SP500"]} disabled />
+          <FormControl label="SP500">
+            <Input
+              value={result["SP500"]}
+              startEnhancer="#"
+              endEnhancer="shares"
+              disabled
+            />
           </FormControl>
-          <FormControl label="US Gvt Bnd 7-10yr number of shares">
-            <Input value={result["Bonds"]} disabled />
+          <FormControl label="US Gvt Bnd 7-10yr">
+            <Input
+              value={result["Bonds"]}
+              startEnhancer="#"
+              endEnhancer="shares"
+              disabled
+            />
           </FormControl>
-          <FormControl label="Gold number of shares">
-            <Input value={result["Gold"]} disabled />
+          <FormControl label="Gold">
+            <Input
+              value={result["Gold"]}
+              startEnhancer="#"
+              endEnhancer="shares"
+              disabled
+            />
           </FormControl>
         </Block>
       )}
