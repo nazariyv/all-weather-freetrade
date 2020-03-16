@@ -43,7 +43,7 @@ export default () => {
         <Paragraph2>
           You will need to input 4 things: the amount of cash you wish to
           invest, and the prices of the assets. Please, round it to a whole
-          number. For example, if S&P500 costis 39.21 GBP, then input 40.
+          number. For example, if S&P500 cost is 39.21 GBP, then input 40
         </Paragraph2>
 
         <FormControl label="Cash you are investing">
