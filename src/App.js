@@ -70,15 +70,15 @@ export default () => {
         </FormControl>
       </Block>
       {result && (
-        <Block>
+        <Block width="80%">
           <Label2>Your allocation is</Label2>
-          <FormControl label="SP500 Number of Shares">
+          <FormControl label="SP500 number of shares">
             <Input value={result["SP500"]} disabled />
           </FormControl>
-          <FormControl label="US Gvt Bnd 7-10yr Number of Shares">
+          <FormControl label="US Gvt Bnd 7-10yr number of shares">
             <Input value={result["Bonds"]} disabled />
           </FormControl>
-          <FormControl>
+          <FormControl label="Gold number of shares">
             <Input value={result["Gold"]} disabled />
           </FormControl>
         </Block>
