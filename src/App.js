@@ -92,6 +92,11 @@ export default () => {
               disabled
             />
           </FormControl>
+          <Input
+            value={result["SP500"] * Math.ceil(sp500Price)}
+            startEnhancer="GBP"
+            disabled
+          />
           <FormControl label="US Gvt Bnd 7-10yr">
             <Input
               value={result["Bonds"]}
@@ -100,6 +105,11 @@ export default () => {
               disabled
             />
           </FormControl>
+          <Input
+            value={result["Bonds"] * Math.ceil(bondPrice)}
+            startEnhancer="GBP"
+            disabled
+          />
           <FormControl label="Gold">
             <Input
               value={result["Gold"]}
@@ -108,6 +118,11 @@ export default () => {
               disabled
             />
           </FormControl>
+          <Input
+            value={result["Gold"] * Math.ceil(goldPrice)}
+            startEnhancer="GBP"
+            disabled
+          />
         </Block>
       )}
       <Block>
